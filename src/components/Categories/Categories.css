@@ -1,0 +1,33 @@
+.categories {
+    min-height: 90vh;
+    background-image: url('../../images/background.jpg');
+}
+
+.categories article {
+    background-color: rgb(95, 51, 137);
+}
+
+.categories button {
+    background-color: rgba(174, 124, 220, 0.7);
+}
+
+.categories button:hover {
+    background-color: rgba(197, 165, 227, 0.7);
+}
+
+.categories table {
+    opacity: .9;
+}
+.categories table th {
+    font-size: 1.3em;
+    font-family: 'Monospace', Lucida Sans Regular;
+}
+.categories table tr {
+    font-family: 'Monospace', 'Lucida Sans', 'Lucida Sans Regular';
+}
+
+.createCategoryContainer {
+    background-color: rgba(174, 124, 220, 0.7);
+    border-radius: 5px;
+    padding: 1em;
+} 
