@@ -1,0 +1,21 @@
+.notFound {
+    text-align: center;
+    position: relative;
+    background-color: #d868a0;
+    
+    }
+    
+    .notFound img {
+        width: 50%;
+        height: 150%;
+    }
+    
+    .notFound h1 {
+        position: center;
+        top: 5vh;
+        color: #fff;
+        -webkit-text-stroke: 1% black;
+        width: 85%;
+        margin-left: 7.5%;
+        font-variant: small-caps;
+    }

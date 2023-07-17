@@ -1,0 +1,55 @@
+section.todos {
+    background-image: url('../../images/background.jpg');
+    background-size: 100%;
+    min-height: 78vh;
+    background-color: rgb(105, 77, 77);
+}
+
+section.todos article.todosGallery {
+    padding: 2em 0 4em;
+}
+
+article.todosGallery div.singleToDo {
+    background-color: rgba(200, 200, 200, .9);
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    border: 2px solid #5a728b;
+    position: relative;
+    padding: 0 0 2em;
+    height: 15em;
+}
+
+div.singleToDo h3 {
+    background-color: rgb(23,162,184);
+    padding: .5em 0;
+    border-bottom: 4px solid #445b71;
+    color: #315b85;
+
+}
+
+div.singleToDo p {
+    padding: 1em;
+}
+
+.todos button {
+    background-color: rgba(174, 124, 220, 0.7);
+}
+
+.todos button:hover {
+    background-color: rgba(197, 165, 227, 0.7);
+}
+
+.singleToDo button#editLink {
+    left: .5em;
+}
+
+.singleToDo button#deleteLink {
+    right: .5em;
+}
+
+button#editLink:hover, button#deleteLink:hover {
+    background-color: rgb(200, 200, 200);
+    color: rgb(144, 45, 20);
+    border-color: rgb(144, 45, 20);
+}
