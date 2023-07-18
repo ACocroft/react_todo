@@ -7,6 +7,7 @@ section.todos {
 
 section.todos article.todosGallery {
     padding: 2em 0 4em;
+    position: relative;
 }
 
 article.todosGallery div.singleToDo {
@@ -21,7 +22,7 @@ article.todosGallery div.singleToDo {
 }
 
 div.singleToDo h3 {
-    background-color: rgb(23,162,184);
+    background-color: rgb(174, 124, 220);
     padding: .5em 0;
     border-bottom: 4px solid #445b71;
     color: #315b85;
@@ -30,14 +31,16 @@ div.singleToDo h3 {
 
 div.singleToDo p {
     padding: 1em;
-}
+} 
 
 .todos button {
-    background-color: rgba(174, 124, 220, 0.7);
+    background-color: rgb(174, 124, 220);
+    border-color: rgb(174, 124, 220);
 }
 
 .todos button:hover {
-    background-color: rgba(197, 165, 227, 0.7);
+    background-color: rgb(197, 165, 227);
+    border-color: rgb(174, 124, 220);
 }
 
 .singleToDo button#editLink {
@@ -47,6 +50,7 @@ div.singleToDo p {
 .singleToDo button#deleteLink {
     right: .5em;
 }
+
 
 button#editLink:hover, button#deleteLink:hover {
     background-color: rgb(200, 200, 200);

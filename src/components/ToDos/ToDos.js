@@ -30,23 +30,28 @@ export default function ToDos() {
   return (
     <section className="todos">
       <article className="bg-purple p-4 mb-4 text-white">
-        <h1 className='text-center'>ToDo Dashboard</h1>
+        <h1 className='text-center'>ReactJS ToDo Dashboard</h1>
       </article>
       {currentUser.email === process.env.REACT_APP_ADMIN_EMAIL &&
-          <div className="bg-dark p-2 mb-3 text-center">
-            <button className="btn btn-default" onClick={() => setShowCreate(!showCreate)}>
-                {!showCreate ? 'Create New ToDo' : 'Close Form'}
-            </button>
-            <div className="createContainer">
-                {showCreate &&
-                    <ToDoCreate getResources={getToDos} setShowCreate={setShowCreate} />
-                }
+        <div className="p-2 mb-3 text-center">
+          {!showCreate ?
+            <button className="btn btn-success p-3 mb-3" onClick={() => setShowCreate(true)}>
+              Create New Task
+            </button> :
+            <button className="btn btn-danger p-3 mb-3" onClick={() => setShowCreate(false)}>
+              Close Form
+          </button>
+          }
+          {showCreate &&
+            <div className="createContainer w-75 m-auto">
+                <ToDoCreate getToDos={getToDos} setShowCreate={setShowCreate} />
             </div>
-          </div>
+          }
+        </div>
       }
       <FilterCat setFilter={setFilter} showDone={showDone} setShowDone={setShowDone} />
       <Container className='pt-4'>
-        <Table striped bordered hover variant='dark'>
+        <Table className="table table-dark table-striped table-bordered table-hover">
           <thead>
             <tr>
               <th>Done</th>
@@ -61,18 +66,18 @@ export default function ToDos() {
             {!showDone ?
               <>
                {filter === 0 ? toDos.filter(x => x.done === false).map(x =>
-                <SingleToDo key={x.ToDoId} todo={x} getToDos={getToDos}/>
+                <SingleToDo key={x.toDoId} todo={x} getToDos={getToDos}/>
                 ) :
                 toDos.filter(x => x.done === false && x.categoryId === filter).map(x =>
-                  <SingleToDo key={x.ToDoId} todo={x} getToDos={getToDos} />
+                  <SingleToDo key={x.toDoId} todo={x} getToDos={getToDos} />
               )}
             </> :
             <>
               {filter === 0 ? toDos.map(x =>
-                  <SingleToDo key={x.ToDoId} todo={x} getToDos={getToDos}/>
+                  <SingleToDo key={x.toDoId} todo={x} getToDos={getToDos}/>
                 ) :
                 toDos.filter(x => x.categoryId === filter).map(x =>
-                  <SingleToDo key={x.ToDoId} todo={x} getToDos={getToDos} />
+                  <SingleToDo key={x.toDoId} todo={x} getToDos={getToDos} />
               )}
             </>
             }
@@ -100,3 +105,4 @@ export default function ToDos() {
     </section>
   )
 }
+
