@@ -8,11 +8,11 @@ export default function ToDoEdit(props) {
         show={props.showEdit}
         onHide={() => props.setShowEdit(false)}
         size='lg'>
-            <Modal.Header className='bg-info' closeButton>
+            <Modal.Header className='bg-default' closeButton>
                 <h3>Editing {props.todo.name}</h3>
             </Modal.Header>
             <Modal.Body>
-                <ToDoForm todo={props.todo} setShowEdit={props.setShowEdit} getToDo={props.getToDos}/>
+                <ToDoForm todo={props.todo} setShowEdit={props.setShowEdit} getToDos={props.getToDos}/>
             </Modal.Body>
     </Modal>
   )

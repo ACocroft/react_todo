@@ -77,7 +77,7 @@ export default function ToDoForm(props) {
                     </Field>
                 </div>
                 <div className="form-group m-3">
-                    <button type='submit' className="btn btn-info m-3">
+                    <button type='submit' className="btn btn-success m-3">
                         Submit ToDo to API
                     </button>
                 </div>

@@ -14,11 +14,11 @@ export default function FilterCat(props) {
 
   return (
     <div className='text-center mt-5'>
-        <button className='btn btn-outline-info bg-dark m-1' onClick={() => props.setFilter(0)}>
+        <button className='btn btn-primary bg-dark m-1' onClick={() => props.setFilter(0)}>
             All
         </button>
         {categories.map( c => 
-            <button key={c.categoryId} className='btn btn-outline-info bg-dark m-1' 
+            <button key={c.categoryId} className='btn btn-primary bg-dark m-1' 
             onClick={() => props.setFilter(c.categoryId)}>
                 {c.catName}
             </button>

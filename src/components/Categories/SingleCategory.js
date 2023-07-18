@@ -5,7 +5,7 @@ import CatEdit from './CatEdit'
 import axios from 'axios'
 
 export default function SingleCategory(props) {
-  const [showEdit, setShowEdit] = useState(false);
+  const [showEdit, setShowEdit] = useState(false)
   const { currentUser } = useAuth()
 
   const deleteCat = (id) => {
@@ -18,7 +18,6 @@ export default function SingleCategory(props) {
     <tr>
         <td>{props.category.catName}</td>
         <td>{props.category.catDesc} </td>
-        {/* BEGIN EDIT UI */}
         {currentUser.email === process.env.REACT_APP_ADMIN_EMAIL &&
           <td>
             <button className="m-1 rounded" id='editLink' onClick={() => setShowEdit(true)}>
@@ -36,7 +35,6 @@ export default function SingleCategory(props) {
             }
           </td>
         }
-        {/* END EDIT UI */}
     </tr>
   )
 }
