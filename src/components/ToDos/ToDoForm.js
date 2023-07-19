@@ -18,18 +18,18 @@ export default function ToDoForm(props) {
         if(!props.todo){
             const toDoToCreate = values
 
-            axios.post(`https://localhost:7284/api/ToDos`, toDoToCreate).then(() => {
+            axios.post(`https://localhost:7284/api/ToDos`, toDoToCreate).then((response) => {
                 props.setShowCreate(false)
                 props.getToDos()
             })
         } else {
             const toDoToEdit = {
-                ToDoId: props.todo.ToDoId,
+                toDoId: props.todo.toDoId,
                 name: values.name,
                 description: values.description,
                 categoryId: values.categoryId
             }
-            axios.put(`https://localhost:7284/api/ToDos/${props.todo.ToDoId}`, toDoToEdit).then(() => {
+            axios.put(`https://localhost:7284/api/ToDos/${props.todo.toDoId}`, toDoToEdit).then((response) => {
                 props.getToDos()
                 props.setShowEdit(false)
             })
