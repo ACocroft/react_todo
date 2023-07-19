@@ -11,8 +11,8 @@
          <Logout />
        }  
        
-       <footer className="text-center text-white bg-info p-4">
-           <strong>&copy; {new Date().getFullYear()} Centriq Training, All Rights Reserved.</strong>
+       <footer className="text-center text-black p-4">
+           <strong>&copy; {new Date().getFullYear()} Andrew Cocroft, All Rights Reserved.</strong>
        </footer>
      </>     
    )
